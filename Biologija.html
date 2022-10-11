@@ -1,26 +1,89 @@
 <!DOCTYPE html>
 <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-<html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<html lang="en">
 <head>
-    <h1 >🐦  🐊  Dzīvnieku Sistemātika 🐸  🐦</h1>
-  
-</head>
-
-<style>body{background-color: rgb(46, 109, 9)}
-h1{font-size: 90px}
-h1{text-align: center }
-h1{font-family: 'Courier New'}
-    ;</style>
-<body>
-  
-    
-    <p style="font-size: 20px;">Lai dzīvnieku pasaulē varētu vieglāk orientēties, dzīvniekus tāpat kā augus iedala sistemātiskajās vienībās jeb taksonos. Ar to nodarbojas zinātne sistemātika.</p>
-    <p style="font-size: 20px;">Dzīvnieku sistemātiskās vienības ir tips, klase, kārta, dzimta, ģints, suga. Sistemātikas pamatvienība ir 𝘀𝘂𝗴𝗮.</p>
+<title> Dzīvnieku sistemātika</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-   
-    
- </style>
-</body>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-coffee {font-size:200px}
+</style>
+<script>
+    function valsts(){
+        document.getElementById("lielais").innerHTML="Valsts";
+        document.getElementById("virsraksts").innerHTML="Valsts";
+        document.getElementById("valsts-nav").classList.add("w3-white");
+        document.getElementById("valsts-nav").classList.add("w3-white");
+        document.getElementById("home-nav").classList.remove("w3-white");
+        
+    }
+</script>
+</head>
+<body>
 
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-green w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#"
+     class="w3-bar-item w3-button w3-padding-large w3-white" id="home-nav">Home</a>
+    <a href="#" id="valsts-nav" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" onclick="valsts()">Valsts</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Tips</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Klase</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Kārta</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Valsts</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Tips</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Klase</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Kārta</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-green w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo" id="lielais">Dzīvnieku sistemātika</h1>
+  <p class="w3-xlarge">Justīnes Buklovskas un Ojāra Sniķera projekts</p>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1 id="virsraksts">Dzīvnieku sistemātika</h1>
+      <h5 class="w3-padding-32">Lai dzīvnieku pasaulē varētu vieglāk orientēties, dzīvniekus tāpat kā augus iedala sistemātiskajās vienībās jeb taksonos. Ar to nodarbojas zinātne sistemātika.</h5>
+
+      <p class="w3-text-grey">Dzīvnieku sistemātiskās vienības ir tips, klase, kārta, dzimta, ģints, suga. Sistemātikas pamatvienība ir suga.</p>
+    </div>
+
+    <div class="w3-third w3-center">
+     <img src="https://rigazoo.lv/media/animalimages/59e717b744b28.jpg" alt="puzzi" width="500" height="550">
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
 </html>
