@@ -22,9 +22,23 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         document.getElementById("valsts-nav").classList.add("w3-white");
         document.getElementById("valsts-nav").classList.add("w3-white");
         document.getElementById("home-nav").classList.remove("w3-white");
-        
+        document.getElementById("home-nav").classList.add("w3-hover-white");
+        document.getElementById("mazais").innerHTML="";
+      
+        document.getElementById("big-text").innerHTML="Valsts ir organismu klasifikācijas taksonomiskā vienība.";
+        document.getElementById("small-text").innerHTML="Neskatoties uz dzīvnieku lielo daudzveidību, visiem tiem tomēr ir arī kopīgas pazīmes. Daļa no tām (šūnainā uzbūve, spējas baroties, augt, elpot, attīstīties un vairoties) piemīt ne tikai dzīvniekiem, bet arī augiem, sēnēm un baktērijām. Visi dzīvie organismi barojas, elpo, aug, attīstās, vairojas un sastāv no šūnām. Taču ir arī citas pazīmes, kuru augiem trūkst. Pie tām pieder, piemēram, barošanās ar gatavām organiskām vielām un aktīva pārvietošanās. Gatavo organisko vielu uzņemšana, kas raksturīga visiem dzīvniekiem, novērojama vēl sēnēm, vairākumam baktēriju un parazītaugiem. Aktīva pārvietošanās ir raksturīga pazīme dzīvnieku lielākajai daļai. Taču pārvietoties spēj arī vienšūnas aļģes un baktērijas. Lielākajai daļai dzīvnieku ir gremošanas, elpošanas, nervu un citu orgānu sistēmas, kuru nav augiem, sēnēm un baktērijām.";
+    }
+    function dzivnieku(){
+      document.getElementById("home-nav").classList.add("w3-white");
+      document.getElementById("lielais").innerHTML="Dzīvnieku sistemātika";
+      document.getElementById("valsts-nav").classList.remove("w3-white");
+      document.getElementById("virsraksts").innerHTML="Dzīvnieku sistemātika";
+      document.getElementById("mazais").innerHTML="Justīnes Buklovskas un Ojāra Sniķera projekts";
+      document.getElementById("big-text").innerHTML="Lai dzīvnieku pasaulē varētu vieglāk orientēties, dzīvniekus tāpat kā augus iedala sistemātiskajās vienībās jeb taksonos. Ar to nodarbojas zinātne sistemātika.";
+      document.getElementById("small-text").innerHTML="Dzīvnieku sistemātiskās vienības ir tips, klase, kārta, dzimta, ģints, suga. Sistemātikas pamatvienība ir suga."
     }
 </script>
+
 </head>
 <body>
 
@@ -33,11 +47,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-green w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#"
-     class="w3-bar-item w3-button w3-padding-large w3-white" id="home-nav">Home</a>
+     class="w3-bar-item w3-button w3-padding-large w3-white" id="home-nav" onclick="dzivnieku()">Dzīvnieku sistemātika</a>
     <a href="#" id="valsts-nav" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" onclick="valsts()">Valsts</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Tips</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Klase</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Kārta</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Dzimta</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Ģints</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Suga</a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -52,7 +69,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- Header -->
 <header class="w3-container w3-green w3-center" style="padding:128px 16px">
   <h1 class="w3-margin w3-jumbo" id="lielais">Dzīvnieku sistemātika</h1>
-  <p class="w3-xlarge">Justīnes Buklovskas un Ojāra Sniķera projekts</p>
+  <p class="w3-xlarge" id="mazais">Justīnes Buklovskas un Ojāra Sniķera projekts</p>
 </header>
 
 <!-- First Grid -->
@@ -60,13 +77,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-content">
     <div class="w3-twothird">
       <h1 id="virsraksts">Dzīvnieku sistemātika</h1>
-      <h5 class="w3-padding-32">Lai dzīvnieku pasaulē varētu vieglāk orientēties, dzīvniekus tāpat kā augus iedala sistemātiskajās vienībās jeb taksonos. Ar to nodarbojas zinātne sistemātika.</h5>
+      <h5 class="w3-padding-32" id="big-text">Lai dzīvnieku pasaulē varētu vieglāk orientēties, dzīvniekus tāpat kā augus iedala sistemātiskajās vienībās jeb taksonos. Ar to nodarbojas zinātne sistemātika.</h5>
 
-      <p class="w3-text-grey">Dzīvnieku sistemātiskās vienības ir tips, klase, kārta, dzimta, ģints, suga. Sistemātikas pamatvienība ir suga.</p>
+      <p class="w3-text-grey" id="small-text">Dzīvnieku sistemātiskās vienības ir tips, klase, kārta, dzimta, ģints, suga. Sistemātikas pamatvienība ir suga.</p>
     </div>
 
     <div class="w3-third w3-center">
-     <img src="https://rigazoo.lv/media/animalimages/59e717b744b28.jpg" alt="puzzi" width="500" height="550">
+     <img src="https://rigazoo.lv/media/animalimages/59e717b744b28.jpg" alt="puzzi" width="500" height="550" id="foto">
     </div>
   </div>
 </div>
