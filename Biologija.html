@@ -11,12 +11,20 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+*{
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-coffee {font-size:200px}
 </style>
 <script>
-    function valsts(){
+function valsts(){
         document.getElementById("lielais").innerHTML="Valsts";
         document.getElementById("virsraksts").innerHTML="Valsts";
         document.getElementById("valsts-nav").classList.add("w3-white");
@@ -24,10 +32,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         document.getElementById("home-nav").classList.remove("w3-white");
         document.getElementById("home-nav").classList.add("w3-hover-white");
         document.getElementById("mazais").innerHTML="";
-      
+        document.getElementById("image").src="https://i.natgeofe.com/k/c02b35d2-bfd7-4ed9-aad4-8e25627cd481/komodo-dragon-head-on_4x3.jpg";
         document.getElementById("big-text").innerHTML="Valsts ir organismu klasifikācijas taksonomiskā vienība.";
         document.getElementById("small-text").innerHTML="Neskatoties uz dzīvnieku lielo daudzveidību, visiem tiem tomēr ir arī kopīgas pazīmes. Daļa no tām (šūnainā uzbūve, spējas baroties, augt, elpot, attīstīties un vairoties) piemīt ne tikai dzīvniekiem, bet arī augiem, sēnēm un baktērijām. Visi dzīvie organismi barojas, elpo, aug, attīstās, vairojas un sastāv no šūnām. Taču ir arī citas pazīmes, kuru augiem trūkst. Pie tām pieder, piemēram, barošanās ar gatavām organiskām vielām un aktīva pārvietošanās. Gatavo organisko vielu uzņemšana, kas raksturīga visiem dzīvniekiem, novērojama vēl sēnēm, vairākumam baktēriju un parazītaugiem. Aktīva pārvietošanās ir raksturīga pazīme dzīvnieku lielākajai daļai. Taču pārvietoties spēj arī vienšūnas aļģes un baktērijas. Lielākajai daļai dzīvnieku ir gremošanas, elpošanas, nervu un citu orgānu sistēmas, kuru nav augiem, sēnēm un baktērijām.";
-    }
+       
+        
+      }
     function dzivnieku(){
       document.getElementById("home-nav").classList.add("w3-white");
       document.getElementById("lielais").innerHTML="Dzīvnieku sistemātika";
@@ -36,6 +46,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       document.getElementById("mazais").innerHTML="Justīnes Buklovskas un Ojāra Sniķera projekts";
       document.getElementById("big-text").innerHTML="Lai dzīvnieku pasaulē varētu vieglāk orientēties, dzīvniekus tāpat kā augus iedala sistemātiskajās vienībās jeb taksonos. Ar to nodarbojas zinātne sistemātika.";
       document.getElementById("small-text").innerHTML="Dzīvnieku sistemātiskās vienības ir tips, klase, kārta, dzimta, ģints, suga. Sistemātikas pamatvienība ir suga."
+      document.getElementById("image").src="https://rigazoo.lv/media/animalimages/59e717b744b28.jpg"
     }
 </script>
 
@@ -83,7 +94,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
 
     <div class="w3-third w3-center">
-     <img src="https://rigazoo.lv/media/animalimages/59e717b744b28.jpg" alt="puzzi" width="500" height="550" id="foto">
+      <img class="image" 
+      img id="image"
+src="https://rigazoo.lv/media/animalimages/59e717b744b28.jpg"
+alt="puzzi"; 
+width="500"
+height="550"
+></img>
+    
     </div>
   </div>
 </div>
