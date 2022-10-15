@@ -24,9 +24,27 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .fa-coffee {font-size:200px}
 </style>
 <script>
+  function tips(){
+
+        document.getElementById("lielais").innerHTML="Tips";
+        document.getElementById("virsraksts").innerHTML="Tips";
+        document.getElementById("tips-nav").classList.add("w3-white");
+        document.getElementById("tips-nav").classList.add("w3-white");
+        document.getElementById("valsts-nav").classList.remove("w3-white");
+        document.getElementById("valsts-nav").classList.remove("w3-white");
+        document.getElementById("home-nav").classList.remove("w3-white");
+        document.getElementById("home-nav").classList.remove("w3-hover-white");
+        document.getElementById("mazais").innerHTML="";
+        document.getElementById("image").src="https://i.natgeofe.com/k/c02b35d2-bfd7-4ed9-aad4-8e25627cd481/komodo-dragon-head-on_4x3.jpg";
+        document.getElementById("big-text").innerHTML="Valsts ir organismu klasifikācijas taksonomiskā vienība.";
+        document.getElementById("small-text").innerHTML="Neskatoties uz dzīvnieku lielo daudzveidību, visiem tiem tomēr ir arī kopīgas pazīmes. Daļa no tām (šūnainā uzbūve, spējas baroties, augt, elpot, attīstīties un vairoties) piemīt ne tikai dzīvniekiem, bet arī augiem, sēnēm un baktērijām. Visi dzīvie organismi barojas, elpo, aug, attīstās, vairojas un sastāv no šūnām. Taču ir arī citas pazīmes, kuru augiem trūkst. Pie tām pieder, piemēram, barošanās ar gatavām organiskām vielām un aktīva pārvietošanās. Gatavo organisko vielu uzņemšana, kas raksturīga visiem dzīvniekiem, novērojama vēl sēnēm, vairākumam baktēriju un parazītaugiem. Aktīva pārvietošanās ir raksturīga pazīme dzīvnieku lielākajai daļai. Taču pārvietoties spēj arī vienšūnas aļģes un baktērijas. Lielākajai daļai dzīvnieku ir gremošanas, elpošanas, nervu un citu orgānu sistēmas, kuru nav augiem, sēnēm un baktērijām.";
+
+      }
 function valsts(){
         document.getElementById("lielais").innerHTML="Valsts";
         document.getElementById("virsraksts").innerHTML="Valsts";
+        document.getElementById("tips-nav").classList.remove("w3-white");
+        document.getElementById("tips-nav").classList.remove("w3-white");
         document.getElementById("valsts-nav").classList.add("w3-white");
         document.getElementById("valsts-nav").classList.add("w3-white");
         document.getElementById("home-nav").classList.remove("w3-white");
@@ -41,6 +59,8 @@ function valsts(){
     function dzivnieku(){
       document.getElementById("home-nav").classList.add("w3-white");
       document.getElementById("lielais").innerHTML="Dzīvnieku sistemātika";
+      document.getElementById("tips-nav").classList.remove("w3-white");
+      document.getElementById("tips-nav").classList.remove("w3-white");
       document.getElementById("valsts-nav").classList.remove("w3-white");
       document.getElementById("virsraksts").innerHTML="Dzīvnieku sistemātika";
       document.getElementById("mazais").innerHTML="Justīnes Buklovskas un Ojāra Sniķera projekts";
@@ -48,6 +68,7 @@ function valsts(){
       document.getElementById("small-text").innerHTML="Dzīvnieku sistemātiskās vienības ir tips, klase, kārta, dzimta, ģints, suga. Sistemātikas pamatvienība ir suga."
       document.getElementById("image").src="https://rigazoo.lv/media/animalimages/59e717b744b28.jpg"
     }
+   
 </script>
 
 </head>
@@ -60,7 +81,7 @@ function valsts(){
     <a href="#"
      class="w3-bar-item w3-button w3-padding-large w3-white" id="home-nav" onclick="dzivnieku()">Dzīvnieku sistemātika</a>
     <a href="#" id="valsts-nav" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" onclick="valsts()">Valsts</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Tips</a>
+    <a href="#" id="tips-nav" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"onclick="tips()">Tips</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Klase</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Kārta</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Dzimta</a>
